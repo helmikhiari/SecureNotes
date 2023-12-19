@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/dark</item>
+
+    </style>
+    <style name="CustomTimePicker" parent="Widget.MaterialComponents.TimePicker">
+        <!-- Customize the appearance of the header (AM/PM) -->
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textSize">16sp</item>
+
+        <!-- Customize the appearance of the time text -->
+        <item name="android:numbersTextColor">@color/black</item>
+
+    </style>
+
+
+
+
+</resources>

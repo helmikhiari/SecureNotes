@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rec"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    android:elevation="8dp">
+
+
+
+
+    <LinearLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        android:background="@drawable/background_search"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:gravity="center"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            app:tint="@color/search_icon"
+            android:src="@drawable/ic_search"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:contentDescription="@string/search_icon"/>
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@null"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:hint="@string/looking_for"
+            android:textColorHint="@color/hint"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp"
+            android:autofillHints="no" />
+    </LinearLayout>
+
+    <!-- Recycler View -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingHorizontal="0dp"
+        android:paddingVertical="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_bar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
